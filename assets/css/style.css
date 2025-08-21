@@ -1,0 +1,819 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    font-family: 'Pretendard', Arial, sans-serif;
+}
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 50px;
+	padding-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #514EA0;
+}
+
+.header-line {
+    border: 0;
+    height: 2px;
+    background-color: #514EA0;
+    margin: 0;
+}
+
+.mid-line {
+	border: 0;
+    height: 0.5px;
+    background-color: gray;
+    margin: 0;
+}
+
+.main-section {
+    padding: 0;
+    text-align: center;
+}
+
+#home .main-content {
+    position: relative;
+}
+
+.main-image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+#home .main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    margin-bottom: 20px;
+}
+
+.section-logo {
+    margin-bottom: 20px;
+    display: block;    
+    margin-right: auto;
+}
+
+.qr-logo {
+    height: 50px;
+    margin-top: 50px;
+}
+
+.logo-td {
+	padding-left: 100px;
+}
+
+.qsavors-logo {
+    height: 50px;
+    margin-top: 50px;
+}
+
+.text-content-title {
+    text-align: left;    
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 100px;
+}
+
+.text-content-title p {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.text-content {
+    text-align: left;    
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 100px;
+}
+
+.text-content p {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.content-table {
+    width: 100%;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.content-table td {
+    vertical-align: top;
+	text-align: right;
+	min-width: 285px;
+}
+
+.contents-left {
+	display: inline-block;
+	text-align: left;
+	margin-right: auto;
+	min-width: 285px;
+}
+
+.contents-right {
+	/*display: inline-block;
+	text-align: left;
+	margin-right: auto;*/
+	min-width: 200px;
+}
+
+.more-button {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #514EA0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.more-button:hover {
+    background-color: #3a3a7c;
+}
+
+.app-links {
+	margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.app-links img {
+    height: 40px;
+    margin-right: 10px;
+		
+}
+
+.phone-app {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    text-align: left;
+	margin-left: 100px;
+}
+
+.qsavors-box {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+	text-align: left;
+    margin-left: 100px;
+}
+
+.contact-section {
+    background: url('image/bc_background.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px;
+    position: relative;
+    color: white;
+    text-align: left;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    margin-left: 40px;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #514EA0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.contact-button:hover {
+    background-color: #3a3a7c;
+}
+
+.mission-section {
+    background-color: #514EA0;
+    color: white;
+    
+	padding-top: 40px;
+	padding-bottom: 0;
+    text-align: center;
+    position: relative;
+}
+
+.mission-content {
+    position: relative;
+}
+
+.mission-content h2 {
+    font-size: 24px;
+	font-weight: bold;
+    margin-bottom: 70px;
+	margin-top: 50px;
+}
+
+.mission-graphic {
+    position: absolute;
+    top: 30%;
+    right: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.graphic-square {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.top-left {
+    margin-right: 40px;
+}
+
+.top-right {
+    margin-right: 20px;
+}
+
+.middle {
+    margin-right: 30px;
+	background-color: #514EA0;
+}
+
+.bottom-left {
+    margin-right: 50px;
+	background-color: #514EA0;
+}
+
+.mission-statement {
+    background-color: white;
+    color: #514EA0;
+    padding: 50px;    
+    text-align: left;
+    margin-top: 20px;
+}
+
+.mission-statement h3 {
+    font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+    margin-bottom: 10px;
+}
+
+.mission-statement p {
+    font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+    margin-top: 20px;
+}
+
+.qube7-history {
+    background-color: white;
+    color: #514EA0;
+    padding-top: 0;;
+    text-align: center;
+    position: relative;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+.history-content h4 {
+    font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.history-content p {
+    font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.highlight-text {
+    background-color: #514EA0;
+    color: white;
+    padding: 0 5px;
+}
+
+.historytable {
+	margin-top: 30px;
+}
+
+.company-info-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: #514EA0;
+    font-size: 18px;
+    table-layout: fixed;
+}
+
+.company-info-table td {
+	padding: 30px;
+}
+
+.company-info-table .info-label {    
+    padding-right: 0;
+    width: 25%;
+    text-align: left;
+	padding-left: 120px;
+}
+
+.company-info-table .info-value {
+    width: 75%;
+    text-align: left;
+}
+
+.company-info-table td {
+    padding: 10px;
+}
+
+.smartpath {
+    background-color: white;
+    color: #514EA0;
+    padding-top: 0;;
+    text-align: center;
+    position: relative;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+.smartpath h3 {
+    font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+    margin-bottom: 10px;
+}
+
+.smartpath p {
+    font-size: 18px;
+	text-align: center;
+	margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sp-items {
+	display: flexbox;
+	align-items: center;
+	margin-top: 50px;
+    margin-bottom: 20px;
+	gap: 1px;
+	
+}
+
+.sp-items img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.qube7-location {
+    background-color: white;
+    color: #514EA0;
+    padding-top: 0;;
+    text-align: center;
+    position: relative;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+.qube7-location h3 {
+    font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+    margin-bottom: 10px;
+}
+
+.qube7-location p {
+    font-size: 18px;
+	text-align: center;
+	margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    width: 100%;
+	text-align: center;	
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+.businesscontainer {
+	width: 80%;
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+.c-qrcall {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 200px;
+}
+
+.c-qrcall p {
+    font-size: 16px;
+	text-align: left;
+	
+}
+
+.flow-graphic {
+	text-align: center;
+	align-items: center;
+}
+
+.flow-graphic img{
+	text-align: center;
+	align-items: center;
+	width: 100%;
+	min-width: 600px;
+}
+
+.qr-connect {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 100px;
+}
+
+.qr-connect img{
+	margin-bottom: 30px;
+}
+
+.qr-connect p {
+    font-size: 16px;
+	text-align: left;	
+}
+
+.qrcall-app {
+	margin-bottom: 200px;
+}
+
+.qrc-images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+    margin-bottom: 20px;
+	text-align: center;
+	gap: 15px;	
+}
+
+.qrc-images img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+
+.qrapp-images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+    margin-bottom: 20px;
+	text-align: center;
+	gap: 15px;	
+}
+
+.qrapp-images img {
+    width: 40%;
+	min-width: 160px;
+    margin-right: 10px;
+}
+
+.qrapp-links {
+	margin-top: 50px;
+    margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.qrapp-links img {
+    height: 40px;
+    margin-right: 10px;
+		
+}
+
+.qscontainer {
+	width: 80%;
+	padding-left: 150px;
+	padding-right: 150px;
+	margin-top: 0;
+}
+
+.contents-qsavors {
+	background-color: white;
+	box-sizing: border-box;
+	margin-top: 0;
+	height: 100%;
+	display: block;
+}
+
+.qs-info {	
+	text-align: center;	
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.qs-info img{
+	width: 400px;
+}
+
+.qs-info p{
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.qs-info-banner {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+.qs-info-banner img{
+	width: 600px;	
+}
+
+.qs1-value {
+	text-align: center;
+}
+
+.qs1-value img{
+	width: 100%;
+}
+
+.qs_introduce {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+}
+
+.qs_introduce img {
+    width: 120px;
+    height: auto;
+    margin-right: 50px;	
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+}
+
+.values-list li h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.values-list li p {
+    margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.company-footer {
+    background-color: #514EA0;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.company-footer .company-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.company-footer p {
+    margin: 5px 0;
+	text-decoration: none;
+}
+
+.company-footer .business-info {
+    font-size: 14px;
+    font-weight: bold;
+	color: white;
+}
+
+.company-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.company-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 햄버거 메뉴 아이콘 스타일 */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+/* 모바일용 스타일 */
+@media (max-width: 768px) {
+    .company-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    nav {
+        display: none; /* 기본적으로 숨김 */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: auto;
+        width: auto;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    nav a {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .show {
+        display: flex;
+    }
+	.qr-logo {
+		height: 30px;
+		margin-top: 50px;
+	}
+	.qsavors-logo {
+		height: 30px;
+		margin-top: 50px;
+	}
+    .text-content-title, .text-content, .logo-td, .company-info-table .info-label {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+    }
+	.text-content-title p {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	.text-content p {
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+    .content-table, .phone-app, .qsavors-box, .businesscontainer, .smartpath, .qube7-location, .qscontainer {
+        width: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0;
+    }
+	.content-table td {
+		text-align: right;
+		min-width: 265px;
+	}
+	.qrc-images {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: center;
+		position: relative;
+		text-align: left;
+	}
+	.qrc-images img {
+		width: 150px;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+	.qs-info {
+		text-align: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.qs-info img {
+		width: 200px;
+	}
+	.qs-info-banner img {
+		width: 500px;
+	}
+	.qs-info p {
+		font-size: 14px;
+		font-weight: 600;
+		text-align: left;
+	}
+    .main-image-container img {
+        width: 100%;
+        height: auto;
+    }
+    .flow-graphic img {
+        min-width: 100%;
+    }
+    .mission-graphic {
+		display: none;
+        /*position: static;
+        transform: none;
+        flex-direction: row;
+        gap: 5px;
+        margin-bottom: 20px;*/
+    }
+    .qr-connect p, .c-qrcall p, .qs-info p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+	.qs_introduce img{
+		display:none; !important;
+	}
+	.company-footer {
+		background-color: #514EA0;
+		color: #fff;
+		padding: 20px;
+		text-align: left;
+		padding-left: 10px;
+		font-size: 14px;
+	}
+}
