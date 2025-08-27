@@ -806,6 +806,10 @@ img {
 		font-weight: 700;
 		margin-right: 14px;
 	}
+	/* map */
+	.map {
+		height: 360px;
+	}
 }
 
 
