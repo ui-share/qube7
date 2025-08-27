@@ -570,12 +570,12 @@ img {
 		padding: 0 1.0000rem;
 		display: flex;
 		flex-direction: column;		
-		transition: transform 0.3s ease-in-out;		
-		z-index: 1025;
+		transition: transform .2s ease-in-out;	
 	}
 	.offcanvas.is-show {
 		visibility: visible;
 		transform: none;
+		overflow: auto;
 	}
 	.navbar-nav > .nav-item {
 		width: 100%;
