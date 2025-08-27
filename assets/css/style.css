@@ -128,9 +128,7 @@
 	--body-line-height: 1.5;
 	--body-font-color: var(--text-base);
 	--body-font-color-rgb: var(--text-base-rgb);
-
 }
-
 /* reboot ------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -222,6 +220,13 @@ img {
 	font-size: 0!important;
 	opacity: 0!important;
 }
+/* pc, mo change 용 */
+.pc-only {
+	display: block;
+}
+.mo-only {
+	display: none;
+}
 /* padding */
 .p-0 {
 	padding: 0 !important;
@@ -229,9 +234,6 @@ img {
 .px-0 {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-}
-.pb-0 {
-	padding-bottom: 0 !important;
 }
 /* background */
 .bg-tint {
@@ -352,58 +354,63 @@ img {
 	color: var(--color-primary);
 }
 
-.img.mo {
-	display: none; /* 모바일 이미지 안보이게 */
-}
-/* 양 옆 가려지는 이미지 */
-.image-wrap--overflow {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-}
-.image-wrap--overflow::before,
-.image-wrap--overflow::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100px;       /* 그라데이션의 폭 조정 가능 */
-	pointer-events: none;
-	z-index: 1;
-}
-.image-wrap--overflow::before {
-	left: 0;
-	background: linear-gradient(to right, var(--white), transparent);
-}
-.image-wrap--overflow::after {
-	right: 0;
-	background: linear-gradient(to left, var(--white), transparent);
-}
-.image-wrap--overflow img {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: auto;
-	min-width: 100%;
-	max-width: none;
-	height: auto;
-}
-.bg-img {
-	height: 640px;
-	background-size: cover, cover;
-	background-position: center, center;
-}
-.bg-img.about {
-	background-image: url(../images/about_background.png);
-}
-.bg-img.culture {
-	background-image: url(../images/culture_background.png);
-}
-.bg-img .section__text,
-.bg-img .section__title {
+/* button */
+.btn {
+	min-width: 320px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
 	color: var(--text-inverse);
+	background-color: #514EA0;
+	border-radius: 0.5rem;
+	padding: 1rem 2rem;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	/* row, column 정렬 변경 */
+	.row {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+}
+	.column {
+		gap: 16px;
+	}
+	.column-end, .column-start {
+		align-items: center;
+		text-align: center;
+}
+	.section-block {
+		padding: 42px 26px;
+	}
+	/* section 텍스트 크기 */
+	.section__title {
+		font-size: 20px;
+}
+	.section__title--lg {
+		font-size: 20px;
+	}  
+	.section__text {
+		font-size: 12px;
+	}
+	.section__text--lg {
+		font-size: 20px;
+	}
+	.bg-tint .section__title {
+		font-size: 14px;
+	}
+	.text-wrap.column {
+		gap: 8px;
 }
 
+	/* tag 텍스트 크기*/
+	.tag {
+		padding: 0.5rem 1rem;
+}
+	.tag__text {
+		font-size: 12px;
+}
+}
 
 
 
@@ -666,74 +673,143 @@ img {
 }
 
 
-/* -- 중단점 : PC first ----------- */
-/* X-Small devices mobile 480px and up */
-@media (max-width: 480px) { }
+
+
+/* page ------------------------------------------------------- */
+/* page : index */
+/* index 내 slide를 제외한 제일 첫 section */
+.intro-section .section-block { 
+	padding-bottom: 0;
+}
+.intro-section .logo {
+	width: 400px;
+}
+.intro-section .section-block > .section-block {
+	background: -webkit-linear-gradient(top, var(--white), var(--yellow-200));
+	background: -moz-linear-gradient(top, var(--white), var(--yellow-200));
+	background: linear-gradient(to bottom, var(--white), var(--yellow-200));
+}
+/* page : culture, about */
+.bg-img {
+	height: 640px;
+	background-size: cover, cover;
+	background-position: center, center;
+	}
+.bg-img.about {
+	background-image: url(../images/about_background.png);
+	}
+.bg-img.culture {
+	background-image: url(../images/culture_background.png);
+}
+.bg-img .section__text,
+.bg-img .section__title {
+	color: var(--text-inverse);
+}
+/* page : about */
+/* history : 연혁 */
+.history-year {
+	font-size: 32px;
+	font-weight: 700;
+	}
+.history-list {
+	font-size: 26px;
+	font-weight: 500;
+	}  
+.history-list .month {
+	font-weight: 700;
+	margin-right: 14px;
+}
+/* 양 옆 가려지는 이미지 */
+.image-wrap--overflow {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	}
+.image-wrap--overflow::before,
+.image-wrap--overflow::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100px;       /* 그라데이션의 폭 조정 가능 */
+	pointer-events: none;
+	z-index: 1;
+	}
+.image-wrap--overflow::before {
+	left: 0;
+	background: linear-gradient(to right, var(--white), transparent);
+}
+.image-wrap--overflow::after {
+	right: 0;
+	background: linear-gradient(to left, var(--white), transparent);
+	}
+.image-wrap--overflow img {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: auto;
+	min-width: 100%;
+	max-width: none;
+	height: auto;
+	}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-	/* row, column 정렬 변경 */
-	.row {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
+	/* pc, mo change 용 */
+	.pc-only {
+		display: none;
 	}
-	.column {
-		gap: 16px;
+	.mo-only {
+		display: block;
 	}
-	.column-end, .column-start {
-		align-items: center;
-		text-align: center;
-	}
-	.section-block {
-		padding: 42px 26px;
-	}
-	/* section 텍스트 크기 */
-	.section__title {
-		font-size: 20px;
-	}
-	.section__title--lg {
-		font-size: 20px;
-	}  
-	.section__text {
-		font-size: 12px;
-	}
-	.section__text--lg {
-		font-size: 20px;
-	}
-	.bg-tint .section__title {
-		font-size: 14px;
-	}
-	.text-wrap.column {
-		gap: 8px;
-	}
-
-	/* tag 텍스트 크기*/
-	.tag {
-		padding: 0.5rem 1rem;
-	}
-	.tag__text {
-		font-size: 12px;
-	}
-
-	/* PC/MO 이미지 체인지 */
-	.img.mo {
-		display: block; /* 모바일 이미지 보이게 */
-	}
-	.img.pc {
-		display: none; /* 모바일 이미지 안보이게 */
-	}
-	.img.logo {
+	/* img bi 공통 */
+	.img.bi {
 		width: 188px;
 	}
-
+	/* page : index */
+	/* index 내 slide를 제외한 제일 첫 section */
+	.intro-section { 
+		background: -webkit-linear-gradient(top, var(--white), var(--yellow-200));
+		background: -moz-linear-gradient(top, var(--white), var(--yellow-200));
+		background: linear-gradient(to bottom, var(--white), var(--yellow-200));
+	}
+	.intro-section .section-block > .section-block {
+		background: unset;
+}
+	/* page : culture, about */
 	.bg-img {
 		height: 360px;
 	}
 	.bg-img .section__text--lg {
 		font-size: 14px;
 	}
+	/* page : about */
+	/* history : 연혁 */
+	.history.column-start {
+		align-items: start;
+		text-align: left;
+	}
+	.history-year {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.history-list {
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.history-list .month {
+		font-weight: 700;
+		margin-right: 14px;
+	}
 }
+
+
+/* -- 중단점 : PC first ----------- */
+/* X-Small devices mobile 480px and up */
+@media (max-width: 480px) { }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { }
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) { }
