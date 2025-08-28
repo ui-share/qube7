@@ -784,7 +784,7 @@ img {
 	align-items: center;
 	justify-content: center;
 	min-height: 460px;
-	max-height: 480px;
+	/* max-height: 480px; */
 	background-size: cover;
 	background-position: center, center;
 	background-repeat: no-repeat;
