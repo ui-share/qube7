@@ -359,17 +359,6 @@ img {
 	color: var(--color-primary);
 }
 
-/* button */
-.btn {
-	min-width: 320px;
-	font-size: 20px;
-	font-weight: 600;
-	text-align: center;
-	color: var(--text-inverse);
-	background-color: #514EA0;
-	border-radius: 0.5rem;
-	padding: 1rem 2rem;
-}
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
 	/* row, column 정렬 변경 */
