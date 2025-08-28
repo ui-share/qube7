@@ -18,30 +18,28 @@
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="주식회사 큐브7">
 		<meta property="og:description" content="한 주의 일상적 가치를 스캔하다.">
-		<meta property="og:image" content="https://www.qube7.co.kr/images/ogimage.png">
+		<meta property="og:image" content="assets/images/ogimage.png">
 		<meta property="og:url" content="https://www.qube7.co.kr">
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="주식회사 큐브7">
 		<meta name="twitter:description" content="한 주의 일상적 가치를 스캔하다.">
-		<meta name="twitter:image" content="https://www.qube7.co.kr/images/ogimage.png">
+		<meta name="twitter:image" content="assets/images/ogimage.png">
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="assets/vendors/swiper/swiper-bundle.min.css">
 		<link rel="stylesheet" href="assets/css/style.css">
-
-		
 	</head>
 
 	<body>
-		<div id="header"></div>
+<div id="header"></div>
 <main id="app"></main>
 <div id="footer"></div>
 
-
+<!-- Header Template -->
 <template id="tpl-header">
-		<header class="header navbar sticky-top">
+	<header class="header navbar sticky-top">
 		<nav class="header__inner">
 			<!-- Brand -->
 			<div class="header__brand">
@@ -110,30 +108,30 @@
 		</nav>
 	</header>
 </template>
-	<!-- Footer Template -->
+<!-- Footer Template -->
 <template id="tpl-footer">
 	<footer class="footer">
-	<div class="footer__inner">
-		<div class="footer__brand">
-		<a href="#/">
-			<img src="assets/images/qube7_ci.png" class="brand-img" alt="큐브7 로고">
-		</a>
+		<div class="footer__inner">
+			<div class="footer__brand">
+				<a href="#/">
+					<img src="assets/images/qube7_ci.png" class="brand-img" alt="큐브7 로고">
+				</a>
+			</div>
+			<div class="footer__content">
+				<p class="footer__company">(주) 큐브7</p>
+				<address class="footer__addr">
+					<span class="footer__line">사업자등록번호 : <b>796-86-03081</b></span>
+					<span class="footer__line">주소 : 서울특별시 송파구 송이로 96, 2층(가락동, 디오티스 빌딩)</span>
+				</address>
+				<p class="footer__copy">Qube7 INC. All rights reserved</p>
+			</div>
 		</div>
-		<div class="footer__content">
-		<p class="footer__company">(주) 큐브7</p>
-		<address class="footer__addr">
-			<span class="footer__line">사업자등록번호 : <b>796-86-03081</b></span>
-			<span class="footer__line">주소 : 서울특별시 송파구 송이로 96, 2층(가락동, 디오티스 빌딩)</span>
-		</address>
-		<p class="footer__copy">Qube7 INC. All rights reserved</p>
-		</div>
-	</div>
 	</footer>
 </template>	
 
 <!-- 각 페이지 템플릿 -->
+<!-- home -->
 <template id="tpl-home">
-
 	<div class="section">
 		<!-- Swiper -->
 		<div class="swiper mainSwiper" id="mainSwiper">
@@ -226,13 +224,9 @@
 			</div>
 		</div>
 	</div>
-	
-
-
-  </template>
-
+</template>
+<!-- about -->
 <template id="tpl-about">
-
 	<div class="section bg-img about">
 		<div class="section-block column">
 			<div class="text-wrap column">
@@ -317,9 +311,8 @@
 			<!-- /map -->
 		</div>
 	</div>
-
 </template>
-
+<!-- culture -->
 <template id="tpl-culture">
    	<div class="section bg-img culture">
 		<div class="section-block column">
@@ -332,7 +325,7 @@
 				</p>
 				<p class="section__text">
 					큐브7에는 일상의 가치를 연결하기 위해, 각자의 풍미를 가진 다양한 인재들이 모여있습니다.<br>
-                    이렇게 모인 Q.Savors 들은 서로의 지식과 경험을 나누고,<br>
+					이렇게 모인 Q.Savors 들은 서로의 지식과 경험을 나누고,<br>
 					이를 통해 일상의 가치를 연결하는 완전한 서비스를 만들어가고 있습니다.
 				</p>
 			</div>
@@ -361,23 +354,19 @@
 		</div>
 	</div>
 </template>
-
-  <template id="tpl-contact">
-    <style>
-	.contac {
-		height: 100vh;
-	}
-  </style>
+<!-- contact -->
+<template id="tpl-contact">
+	<style>
+		.contac {
+			height: 100vh;
+		}
+	</style>
 	<div class="section contac">
-		<iframe src="https://form.jotform.com/250061746529054" width="100%" height="110%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-		
+		<iframe src="https://form.jotform.com/250061746529054" width="100%" height="110%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
 	</div>
-  </template>
-
+</template>
+<!-- business-cs -->
 <template id="tpl-business-cs">
-    
-
 	<div class="section">
 		<div class="section-block row">
 			<div class="text-wrap column column-start">
@@ -482,11 +471,10 @@
 			</div>
 		</div>
 	</div>
-
-
 </template>
-  <template id="tpl-business-mycar">
-    <div class="section">
+<!-- business-mycar -->
+<template id="tpl-business-mycar">
+	<div class="section">
 		<div class="section-block row">
 			<div class="text-wrap column column-start">
 				<h3 class="section__title section__title--lg">
@@ -574,9 +562,10 @@
 		</div>
 	</div>
 
-</template>		
+</template>
+<!-- business-o4o -->
 <template id="tpl-business-o4o">
-    <div class="section">
+	<div class="section">
 		<div class="section-block row">
 			<div class="text-wrap column column-start">
 				<h3 class="section__title section__title--lg">
@@ -681,9 +670,9 @@
 		</div>
 	</div>
 </template>
-
+<!-- business-operation -->
 <template id="tpl-business-operation">
-    <div class="section">
+	<div class="section">
 		<div class="section-block row">
 			<div class="text-wrap column column-start">
 				<h3 class="section__title section__title--lg">
@@ -765,8 +754,9 @@
 		</div>
 	</div>
 </template>
+<!-- services-app -->
 <template id="tpl-services-app">
-    <div class="section bg-grad-wy">
+	<div class="section bg-grad-wy">
 		<div class="section-block row">
 			<div class="image-wrap">
 				<img class="img bi" src="assets/images/service/app/service-app01.png" alt="">
@@ -869,8 +859,9 @@
 		</div>
 	</div> 
 </template>
+<!-- services-platform -->
 <template id="tpl-services-platform">
-    <div class="section">
+	<div class="section">
 		<div class="section-block column">
 			<div class="text-wrap column">
 				<h3 class="section__title section__title--lg">
@@ -974,7 +965,8 @@
 		</div>
 	</div>
 </template>
-	<!-- JS 공통 -->
+
+		<!-- JS 공통 -->
 		<script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
 		<script src="assets/js/app.js"></script>
 	</body>
