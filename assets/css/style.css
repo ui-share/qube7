@@ -395,15 +395,15 @@ img {
 	}
 	.text-wrap.column {
 		gap: 8px;
-}
+	}
 
 	/* tag 텍스트 크기*/
 	.tag {
 		padding: 0.5rem 1rem;
-}
+	}
 	.tag__text {
 		font-size: 12px;
-}
+	}
 }
 
 /*  */
@@ -814,7 +814,7 @@ img {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 100px;       /* 그라데이션의 폭 조정 가능 */
+	width: 100px; /* 그라데이션의 폭 조정 가능 */
 	pointer-events: none;
 	z-index: 1;
 	}
@@ -834,7 +834,7 @@ img {
 	min-width: 100%;
 	max-width: none;
 	height: auto;
-	}
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
